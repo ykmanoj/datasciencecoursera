@@ -36,4 +36,4 @@ colnames(X_total) <- variable_names[selected_var[,1],2]
 colnames(Sub_total) <- "subject"
 total <- cbind(X_total, activitylabel, Sub_total)
 total_mean <- total %>% group_by(activitylabel, subject) %>% summarize_each(funs(mean))
-write.table(total_mean, file = "./UCI HAR Dataset/tidydata.txt", row.names = FALSE, col.names = TRUE)
+write.table(total_mean, file = "./tidydata.txt", row.names = FALSE, col.names = TRUE)
